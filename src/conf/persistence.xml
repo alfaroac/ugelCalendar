@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="agendaPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>pe.edu.upeu.models.Users</class>
+    <class>pe.edu.upeu.models.Activity</class>
+    <class>pe.edu.upeu.models.Files</class>
+    <class>pe.edu.upeu.models.Evidences</class>
+    <class>pe.edu.upeu.models.Calendar</class>
+    <class>pe.edu.upeu.models.Institution</class>
+    <class>pe.edu.upeu.models.Manager</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/dbagenda?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>
